@@ -1,5 +1,4 @@
-[Untitled-1.html](https://github.com/user-attachments/files/23925745/Untitled-1.html)
-<!doctype html>
+
 <html lang="id">
 <head>
   <meta charset="utf-8" />
