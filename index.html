@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> AR motion SewaDrone — Pesan Drone Profesional</title>
+  <meta name="description" content="Template situs sewa drone elegan & profesional. Responsive, modern UI, form pemesanan, galeri, dan pricing." />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom gradient & accents */
+    :root{
+      --accent-1:#06b6d4; /* teal-400 */
+      --accent-2:#0ea5a4; /* teal-500 */
+      --muted:#94a3b8; /* slate-400 */
+      --bg-1:linear-gradient(135deg,#071428 0%, #0f172a 40%, #062a31 100%);
+      --card: rgba(255,255,255,0.03);
+    }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    /* subtle floating animation for hero drone */
+    @keyframes floaty { 0% { transform: translateY(0);} 50% { transform: translateY(-8px);} 100%{transform:translateY(0);} }
+  </style>
+</head>
+<body class="antialiased text-slate-100" style="background:var(--bg-1);">
+  <!-- NAV -->
+  <nav class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-400 to-teal-400 flex items-center justify-center shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h3l3-3 3 3h6v10H3V7z"/></svg>
+      </div>
+      <div>
+        <div class="font-semibold text-lg">ARmotion SewaDrone</div>
+        <div class="text-xs text-[--muted]">Profesional. Aman. On-time.</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-6 text-sm text-slate-200">
+      <a class="hover:underline" href="#services">Layanan</a>
+      <a class="hover:underline" href="#pricing">Harga</a>
+      <a class="hover:underline" href="#gallery">Galeri</a>
+      <a class="hover:underline" href="#contact">Kontak</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#booking" class="hidden md:inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-teal-400 text-slate-900 font-medium shadow-md">Pesan Sekarang</a>
+      <button id="mobileBtn" class="md:hidden p-2 rounded-lg glass">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="max-w-7xl mx-auto px-6 pb-12 flex flex-col md:flex-row items-center gap-10">
+    <div class="flex-1">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Sewa Drone Profesional untuk Foto, Video & Inspeksi</h1>
+      <p class="mt-4 text-slate-300 max-w-2xl">Pilihan drone dan pilot berpengalaman untuk kebutuhan event, pemasaran, pemetaan, atau inspeksi. Aman, legal, dan hasil memukau.</p>
+
+      <div class="mt-6 flex gap-4 items-center">
+        <a href="#booking" class="px-5 py-3 rounded-lg bg-gradient-to-r from-sky-400 to-teal-400 text-slate-900 font-semibold shadow-lg">Pesan Sekarang</a>
+        <a href="#gallery" class="px-4 py-3 rounded-lg glass text-sm">Lihat Galeri</a>
+      </div>
+
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+        <div class="glass p-3 rounded-lg">
+          <div class="text-xs text-[--muted]">Rating</div>
+          <div class="font-semibold text-lg">4.9/5</div>
+        </div>
+        <div class="glass p-3 rounded-lg">
+          <div class="text-xs text-[--muted]">Pengiriman</div>
+          <div class="font-semibold text-lg">On-time</div>
+        </div>
+        <div class="glass p-3 rounded-lg">
+          <div class="text-xs text-[--muted]">Pilot Bersertifikasi</div>
+          <div class="font-semibold text-lg">100+</div>
+        </div>
+        <div class="glass p-3 rounded-lg">
+          <div class="text-xs text-[--muted]">Asuransi</div>
+          <div class="font-semibold text-lg">Termasuk</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 relative">
+      <div class="relative p-6 rounded-2xl glass shadow-2xl">
+        <img src="Img/DJI_20251031152852_0018_D.JPG" alt="drone" class="rounded-xl w-full object-cover" style="height:380px;animation:floaty 6s ease-in-out infinite;"/>
+        <div class="absolute bottom-6 left-6 bg-gradient-to-r from-slate-800/70 to-slate-900/40 p-3 rounded-lg">
+          <div class="text-xs text-[--muted]">Paket populer</div>
+          <div class="text-white font-semibold">Aerial Pro — <span class="text-sm">mulai Rp 750.000/jam</span></div>
+        </div>
+      </div>
+
+      <!-- quick features -->
+      <div class="mt-4 grid grid-cols-2 gap-3">
+        <div class="glass p-3 rounded-lg flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M3 6h18M3 14h18M3 18h18"/></svg>
+          <div class="text-sm">IZIN & ASURANSI</div>
+        </div>
+        <div class="glass p-3 rounded-lg flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3"/></svg>
+          <div class="text-sm">ON-TIME</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Layanan Kami</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl glass">
+        <h3 class="font-semibold">Foto & Video Event</h3>
+        <p class="text-sm mt-2 text-[--muted]">Liputan wedding, konser, dan acara korporat dengan hasil cinematic.</p>
+      </div>
+      <div class="p-6 rounded-2xl glass">
+        <h3 class="font-semibold">Inspeksi & Survey</h3>
+        <p class="text-sm mt-2 text-[--muted]">Pemetaan lahan, inspeksi atap, menara, dan bangunan.</p>
+      </div>
+      <div class="p-6 rounded-2xl glass">
+        <h3 class="font-semibold">Penyewaan & Operator</h3>
+        <p class="text-sm mt-2 text-[--muted]">Sewa drone + pilot berlisensi untuk kebutuhan khusus.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Paket & Harga</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl glass">
+        <div class="text-xs text-[--muted]">Mulai</div>
+        <div class="text-2xl font-bold mt-2">Basic</div>
+        <div class="mt-4 text-sm text-[--muted]">Cocok untuk dokumentasi sederhana.</div>
+        <div class="mt-6 font-semibold">Rp 300.000 / Batrai</div>
+        <button class="mt-4 w-full py-2 rounded-lg bg-gradient-to-r from-sky-400 to-teal-400 text-slate-900">Pilih</button>
+      </div>
+
+      <div class="p-6 rounded-2xl glass border-2 border-slate-700">
+        <div class="text-xs text-[--muted]">Populer</div>
+        <div class="text-2xl font-bold mt-2">Aerial Pro</div>
+        <div class="mt-4 text-sm text-[--muted]">Untuk video marketing & event.</div>
+        <div class="mt-6 font-semibold">Rp 750.000 / jam</div>
+        <button class="mt-4 w-full py-2 rounded-lg bg-gradient-to-r from-sky-400 to-teal-400 text-slate-900">Pilih</button>
+      </div>
+
+      <div class="p-6 rounded-2xl glass">
+        <div class="text-xs text-[--muted]">Advance</div>
+        <div class="text-2xl font-bold mt-2">Survey+</div>
+        <div class="mt-4 text-sm text-[--muted]">Tambahan Edit Sesuai Request.</div>
+        <div class="mt-6 font-semibold">Rp 75.000 / 1 Batrai</div>
+        <button class="mt-4 w-full py-2 rounded-lg bg-gradient-to-r from-sky-400 to-teal-400 text-slate-900">Pilih</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Galeri</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <!-- sample images (unsplash) -->
+      <img class="rounded-xl object-cover h-48 w-full" src="D:\Coding\Rental\Img\DJI_20251031152852_0018_D.JPG" alt="img1" />
+      <img class="rounded-xl object-cover h-48 w-full" src="D:\Coding\Rental\Img\DJI_20251102052142_0095_D - Salin.JPG" alt="img2" />
+      <img class="rounded-xl object-cover h-48 w-full" src="D:\Coding\Rental\Img\DJI_20251102052154_0097_D - Salin.JPG" alt="img3" />
+      <img class="rounded-xl object-cover h-48 w-full" src="D:\Coding\Rental\Img\DJI_20251116105318_0006_D.JPG" alt="img4" />
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="booking" class="max-w-4xl mx-auto px-6 py-12">
+    <div class="p-8 rounded-2xl glass">
+      <h2 class="text-2xl font-bold mb-4">Form Pemesanan</h2>
+      <p class="text-sm text-[--muted] mb-6">Isi data singkat, kami akan mengonfirmasi via email / WA.</p>
+
+      <form id="bookingForm" class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-sm">Nama Lengkap</label>
+          <input required name="name" class="mt-2 w-full p-3 rounded-lg bg-transparent border border-slate-700" placeholder="Nama Anda" />
+        </div>
+        <div>
+          <label class="text-sm">Email</label>
+          <input required name="email" type="email" class="mt-2 w-full p-3 rounded-lg bg-transparent border border-slate-700" placeholder="email@contoh.com" />
+        </div>
+        <div>
+          <label class="text-sm">Nomor WA</label>
+          <input required name="phone" class="mt-2 w-full p-3 rounded-lg bg-transparent border border-slate-700" placeholder="+62 8xx xxxx xxxx" />
+        </div>
+        <div>
+          <label class="text-sm">Tanggal & Jam</label>
+          <input required name="datetime" type="datetime-local" class="mt-2 w-full p-3 rounded-lg bg-transparent border border-slate-700" />
+        </div>
+        <div>
+          <label class="text-sm">Lokasi</label>
+          <input required name="location" class="mt-2 w-full p-3 rounded-lg bg-transparent border border-slate-700" placeholder="Alamat / koordinat" />
+        </div>
+        <div>
+          <label class="text-sm">Paket</label>
+          <select name="package" class="mt-2 w-full p-3 rounded-lg bg-transparent border border-slate-700">
+            <option value="basic">Basic — Rp 300.000/Batrai</option>
+            <option value="pro">Aerial Pro — Rp 600.000/2 Batrai</option>
+            <option value="survey">Tambahan— Rp 75.000/1 batrai</option>
+          </select>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label class="text-sm">Catatan / Permintaan Khusus</label>
+          <textarea name="notes" class="mt-2 w-full p-3 rounded-lg bg-transparent border border-slate-700" rows="4" placeholder="mis. lokasi sulit, butuh izin lokasi, dll"></textarea>
+        </div>
+
+        <div class="sm:col-span-2 flex items-center justify-between">
+          <div class="text-sm text-[--muted]">Dengan mengirim, Anda menyetujui syarat & ketentuan kami.</div>
+          <button type="submit" class="px-5 py-3 rounded-lg bg-gradient-to-r from-sky-400 to-teal-400 text-slate-900 font-semibold">Kirim Pesanan</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- QRIS PAYMENT -->
+  <section id="qris" class="max-w-4xl mx-auto px-6 py-12">
+    <div class="p-8 rounded-2xl glass text-center">
+      <h2 class="text-2xl font-bold mb-4">Metode Pembayaran</h2>
+      <p class="text-sm text-[--muted] mb-6">Pembayaran melalui transfer SeaBank</p>
+
+      <div class="mx-auto inline-block text-left bg-slate-900/40 p-6 rounded-xl border border-slate-700 shadow-lg">
+        <div class="text-sm text-[--muted] mb-1">Nama Bank</div>
+        <div class="text-lg font-semibold mb-3">SeaBank</div>
+
+        <div class="text-sm text-[--muted] mb-1">Nomor Rekening</div>
+        <div class="text-2xl font-bold tracking-wide">9011 3152 0191</div>
+
+        <div class="text-sm text-[--muted] mt-4">Atas Nama: <span class="text-slate-200 font-medium">Ahmad Ridwan</span></div>
+      </div>
+
+      <div class="mt-4 text-sm text-[--muted]">Silakan lakukan transfer kemudian kirim bukti pembayaran via WhatsApp.</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="max-w-7xl mx-auto px-6 py-12 text-sm text-[--muted]">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div>
+        <div class="font-semibold text-white">SewaDrone</div>
+        <div class="mt-2">Email: armotionn@gmail.com<br/>WA:083119174794</div>
+      </div>
+      <div>
+        <div class="font-semibold text-white mb-2">Alamat</div>
+        <div>Grujugan Lor, Jambesari Ds,Bondowoso</div>
+      </div>
+      <div>
+        <div class="font-semibold text-white mb-2">Jam Operasional</div>
+        <div>Senin — Minggu: 07:00 — 19:00</div>
+      </div>
+    </div>
+
+    <div class="mt-8 border-t border-slate-800 pt-6 flex items-center justify-between">
+      <div>© <span id="year"></span> SewaDrone. All rights reserved.</div>
+      <div class="flex gap-3">
+        <a class="glass p-2 rounded-lg" href="https://www.tiktok.com/@pilotdronebws?_r=1&_t=ZS-91unFbydtfZ" target="_blank">TikTok</a>
+        <a class="glass p-2 rounded-lg" href="https://www.instagram.com/rdwansyarf?igsh=MWloN2xjN3J5NWNmbg==" target="_blank">Instagram</a>
+        <a class="glass p-2 rounded-lg" href="https://wa.me/qr/RFULN3DY7HULF1 " target="_blank">WhatsApp</a>
+      </div>
+    </div>
+      <div class="flex gap-3">
+        <a class="glass p-2 rounded-lg" href="#">Syarat</a>
+        <a class="glass p-2 rounded-lg" href="#">Kebijakan</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // booking form demo handler
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      // basic UX feedback — in real app, send to server
+      alert('Terima kasih! Pesanan Anda telah dikirim. Kami akan menghubungi Anda segera.');
+      e.target.reset();
+    });
+
+    // mobile nav toggle
+    document.getElementById('mobileBtn').addEventListener('click', function(){
+      alert('Versi mobile belum diimplementasikan di demo. Ini hanya template statis.');
+    });
+  </script>
+</body>
+</html>
